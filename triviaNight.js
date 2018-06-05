@@ -16,7 +16,7 @@ function getGame(data){
         console.log(q)
 
         var index =0
-        var objQ=""
+        var objQ
         
         console.log(allData[q].correct_answer)
         objQ=allData[q];
@@ -29,7 +29,7 @@ function getGame(data){
         }
         answers=answers.sort(function(a,b,c,d){return 0.5 - Math.random()});
         console.log(answers)
-        for(i=0;i<answers.length;i++){
+        for(i=0;i<=answers.length;i++){
             $(".ans"+i).html("")
         }
         $(this).html(objQ.question+'<br>')
